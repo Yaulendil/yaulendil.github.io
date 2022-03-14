@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
+    <link href="/static/css/std.css" rel="stylesheet" type="text/css">
+
+    <title>Message Generator</title>
+    <meta property="og:title" content="Message Generator">
+    <meta property="og:description" content="A generator for messages from Dark Souls, Demon's Souls, Bloodborne, Sekiro, and Elden Ring.">
+    <meta property="og:site_name" content="DSMsg">
+    <meta name="theme-color" content="#311420">
+</head>
+
+<header>
+    <a href="/" class="nop"><img src="/static/img/logo.png"></a>
+    <div class='floaty'><h2>The Site™</h2></div>
+    <div class='floaty'><p>Do not ask which site.</p></div>
+    <div class='floaty'><p>It is forbidden.</p></div>
+</header>
+
+<body>
+<div class="mainwrap">
+<!-- Main Content -->
+<div class="main">
+    <h1>Message Generator</h1>
+
+    <noscript>This page contains WebAssembly and Javascript content.</noscript>
+
+    <script type="module">
+      import init from '/static/dsmsg_web.js';
+      init();
+    </script>
+
+    <div class="message">
+      <pre class="message" id="message"><noscript>javascript ahead
+therefore Try enabling</noscript></pre>
+<!--      <div class="gametitle"><p>(Format: <em id="game_title"></em>)</p></div>-->
+      <div class="button"><button id="button_generate">Seek Guidance</button></div>
+    </div>
+
+    <hr>
+    <h3>Message sources:</h3>
+
+    <div>
+      <input type="checkbox" id="enable_er1" name="er1" checked>
+      <label for="enable_er1">Elden Ring</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="enable_ds1" name="ds1" value="aaa" checked>
+      <label for="enable_ds1">Dark Souls</label>
+
+      <input type="checkbox" id="enable_ds2" name="ds2" checked>
+      <label for="enable_ds2">Dark Souls II</label>
+
+      <input type="checkbox" id="enable_ds3" name="ds3" checked>
+      <label for="enable_ds3">Dark Souls III</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="enable_bb1" name="bb1">
+      <label for="enable_bb1">Bloodborne</label>
+    </div>
+    <div>
+      <input type="checkbox" id="enable_sek" name="sek">
+      <label for="enable_sek">Sekiro</label>
+    </div>
+    <div>
+      <input type="checkbox" id="enable_des" name="des">
+      <label for="enable_des">Demon's Souls</label>
+    </div>
+
+    <!--<div>
+      <button id="button_enable_all">Enable All</button>
+    </div>-->
+
+    <!--{% if footer %}<footer>
+    {{footer}}
+    </footer>{% endif %}-->
+</div>
+<div><!--Spacer--></div>
+</div>
+
+<!--<div class="cat">&lt;!&ndash;{%if dsmsg%}
+<p><em>“{{dsmsg}}”</em></p>{% endif %}&ndash;&gt;
+<img src="/static/img/coolcat.png" title="meow meow bro">
+</div>-->
+</body>
+</html>
