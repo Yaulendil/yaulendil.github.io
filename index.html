@@ -23,19 +23,13 @@
 <div class="mainwrap">
 <!-- Main Content -->
 <div class="main">
-    <h1>Message Generator</h1>
+    <script type="module" src="/static/dsmsg_web.js"></script>
 
-    <noscript>This page contains WebAssembly and Javascript content.</noscript>
-
-    <script type="module">
-      import init from '/static/dsmsg_web.js';
-      init();
-    </script>
+    <h1>Wisdom from <span id="game_title">another world</span>:</h1>
 
     <div class="message">
       <pre class="message" id="message"><noscript>javascript ahead
 therefore Try enabling</noscript></pre>
-<!--      <div class="gametitle"><p>(Format: <em id="game_title"></em>)</p></div>-->
       <div class="button"><button id="button_generate">Seek Guidance</button></div>
     </div>
 
@@ -75,9 +69,25 @@ therefore Try enabling</noscript></pre>
       <button id="button_enable_all">Enable All</button>
     </div>-->
 
-    <!--{% if footer %}<footer>
-    {{footer}}
-    </footer>{% endif %}-->
+    <h3>Message format:</h3>
+
+    <div>
+      <input type="radio" id="fmt_either" name="msg_format" checked>
+      <label for="fmt_either">Random</label>
+    </div>
+    <div>
+      <input type="radio" id="fmt_single" name="msg_format">
+      <label for="fmt_single">One line</label>
+    </div>
+    <div>
+      <input type="radio" id="fmt_double" name="msg_format">
+      <label for="fmt_double">Two lines</label>
+    </div>
+
+    <footer>
+        <hr>
+        <p>Code available on <a href="https://github.com/yaulendil/dsmsg">Github</a>.</p>
+    </footer>
 </div>
 <div><!--Spacer--></div>
 </div>

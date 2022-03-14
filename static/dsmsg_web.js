@@ -1,4 +1,3 @@
-
 let wasm;
 
 const heap = new Array(32).fill(undefined);
@@ -72,12 +71,6 @@ function makeMutClosure(arg0, arg1, dtor, f) {
 }
 function __wbg_adapter_14(arg0, arg1) {
     wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h342866ce6931285f(arg0, arg1);
-}
-
-/**
-*/
-export function main() {
-    wasm.main();
 }
 
 function isLikeNone(x) {
@@ -173,6 +166,9 @@ async function init(input) {
     imports.wbg.__wbg_checked_5b6eab0ab31f5d34 = function(arg0) {
         var ret = getObject(arg0).checked;
         return ret;
+    };
+    imports.wbg.__wbg_setdisabled_9e408b6d121daaa9 = function(arg0, arg1) {
+        getObject(arg0).disabled = arg1 !== 0;
     };
     imports.wbg.__wbg_document_5edd43643d1060d9 = function(arg0) {
         var ret = getObject(arg0).document;
@@ -270,8 +266,8 @@ async function init(input) {
         var ret = wasm.memory;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper62 = function(arg0, arg1, arg2) {
-        var ret = makeMutClosure(arg0, arg1, 11, __wbg_adapter_14);
+    imports.wbg.__wbindgen_closure_wrapper83 = function(arg0, arg1, arg2) {
+        var ret = makeMutClosure(arg0, arg1, 21, __wbg_adapter_14);
         return addHeapObject(ret);
     };
 
@@ -289,5 +285,4 @@ async function init(input) {
     return wasm;
 }
 
-export default init;
-
+init();
