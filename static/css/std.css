@@ -100,10 +100,10 @@ body {
                   position: relative;
                   text-align: center;
                   text-anchor: middle;
-                  min-width: 120ex; }
+                  font: italic 18px Arial, sans-serif;
+                  width: 60ex; }
                   div.message pre {
-                    height: 5ex;
-                    font: italic 32px Arial, sans-serif;
+                    height: 6ex;
                     text-align: center; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -171,9 +171,9 @@ a.right {
 
 div.mainwrap {
   margin-bottom: 50px;
-  margin-left: 10%;
-  margin-right: 10%;
-  min-width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 640px;
   position: relative;
   top: 79px; }
 
