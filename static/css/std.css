@@ -101,7 +101,7 @@ body {
                   text-align: center;
                   text-anchor: middle;
                   font: italic 18px Arial, sans-serif;
-                  width: 60ex; }
+                  width: 85ex; }
                   div.message pre {
                     height: 6ex;
                     text-align: center; }
@@ -173,7 +173,7 @@ div.mainwrap {
   margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
-  width: 640px;
+  width: 864px;
   position: relative;
   top: 79px; }
 
