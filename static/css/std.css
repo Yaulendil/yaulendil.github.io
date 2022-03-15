@@ -100,11 +100,12 @@ body {
                   position: relative;
                   text-align: center;
                   text-anchor: middle;
-                  font: italic 18px Arial, sans-serif;
-                  width: 85ex; }
+                  font: italic 24px Arial, sans-serif;
+                  width: 64ex; }
                   div.message pre {
                     height: 6ex;
-                    text-align: center; }
+                    text-align: center;
+                    font-family: inherit; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
