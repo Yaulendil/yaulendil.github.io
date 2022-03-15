@@ -3,91 +3,101 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
-    <link href="/static/css/std.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/static/css/std.css" type="text/css">
 
     <title>Message Generator</title>
     <meta property="og:title" content="Message Generator">
     <meta property="og:description" content="A generator for messages from Dark Souls, Demon's Souls, Bloodborne, Sekiro, and Elden Ring.">
     <meta property="og:site_name" content="DSMsg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
     <meta name="theme-color" content="#311420">
 </head>
 
 <header>
     <a href="/" class="nop"><img src="/static/img/logo.png"></a>
-    <div class='floaty'><h2>The Site™</h2></div>
-    <div class='floaty'><p>Do not ask which site.</p></div>
-    <div class='floaty'><p>It is forbidden.</p></div>
+    <div class="floaty"><h2>The Site™</h2></div>
+    <div class="floaty"><p>Do not ask which site.</p></div>
+    <div class="floaty"><p>It is forbidden.</p></div>
 </header>
 
 <body style="background-image: url('/static/img/stone.png');">
-<div class="mainwrap">
 <!-- Main Content -->
 <div class="main">
     <h1>Wisdom from <span id="game_title">another world</span>:</h1>
 
     <div class="message">
-      <pre class="message" id="message"><noscript>javascript ahead
-therefore Try enabling</noscript></pre>
+      <pre class="message" id="message"><noscript>javascript ahead&NewLine;therefore Try enabling</noscript></pre>
       <div><button class="click" id="button_generate">Seek Guidance</button></div>
     </div>
 
     <hr>
-    <h3>Message sources:</h3>
+    <h3>Options</h3>
 
-    <div>
-      <input class="click" id="enable_er1" type="checkbox" name="er1" checked>
-      <label class="click" for="enable_er1">Elden Ring</label>
-    </div>
+    <fieldset>
+        <legend title="Messages will be generated using the vocabularies of the games selected below.">
+            Message sources
+        </legend>
 
-    <div>
-      <input class="click" id="enable_ds1" type="checkbox" name="ds1" checked>
-      <label class="click" for="enable_ds1">Dark Souls</label>
+        <div>
+          <input class="click" id="enable_er1" type="checkbox" name="er1" checked>
+          <label class="click" for="enable_er1">Elden Ring</label>
+        </div>
 
-      <input class="click" id="enable_ds2" type="checkbox" name="ds2" checked>
-      <label class="click" for="enable_ds2">Dark Souls II</label>
+        <div>
+          <input class="click" id="enable_ds1" type="checkbox" name="ds1" checked>
+          <label class="click" for="enable_ds1">Dark Souls</label>
 
-      <input class="click" id="enable_ds3" type="checkbox" name="ds3" checked>
-      <label class="click" for="enable_ds3">Dark Souls III</label>
-    </div>
+          <input class="click" id="enable_ds2" type="checkbox" name="ds2" checked>
+          <label class="click" for="enable_ds2">Dark Souls II</label>
 
-    <div>
-      <input class="click" id="enable_bb1" type="checkbox" name="bb1">
-      <label class="click" for="enable_bb1">Bloodborne</label>
-    </div>
-    <div>
-      <input class="click" id="enable_sek" type="checkbox" name="sek">
-      <label class="click" for="enable_sek">Sekiro</label>
-    </div>
-    <div>
-      <input class="click" id="enable_des" type="checkbox" name="des">
-      <label class="click" for="enable_des">Demon's Souls</label>
-    </div>
+          <input class="click" id="enable_ds3" type="checkbox" name="ds3" checked>
+          <label class="click" for="enable_ds3">Dark Souls III</label>
+        </div>
+
+        <div>
+          <input class="click" id="enable_bb1" type="checkbox" name="bb1">
+          <label class="click" for="enable_bb1">Bloodborne</label>
+        </div>
+        <div>
+          <input class="click" id="enable_sek" type="checkbox" name="sek">
+          <label class="click" for="enable_sek">Sekiro</label>
+        </div>
+        <div>
+          <input class="click" id="enable_des" type="checkbox" name="des">
+          <label class="click" for="enable_des">Demon's Souls</label>
+        </div>
+    </fieldset>
 
     <!--<div>
       <button class="click" id="button_enable_all">Enable All</button>
     </div>-->
 
-    <h3>Message format:</h3>
+    <fieldset>
+        <legend title="Messages may be generated either with one line, or with two lines and a conjunction.">
+            Message format
+        </legend>
 
-    <div>
-      <input class="click" id="fmt_either" type="radio" name="msg_format" checked>
-      <label class="click" for="fmt_either">Any</label>
-    </div>
-    <div>
-      <input class="click" id="fmt_single" type="radio" name="msg_format">
-      <label class="click" for="fmt_single">One line</label>
-    </div>
-    <div>
-      <input class="click" id="fmt_double" type="radio" name="msg_format">
-      <label class="click" for="fmt_double">Two lines</label>
-    </div>
+        <div>
+            <input class="click" id="fmt_either" type="radio" name="msg_format" checked>
+            <label class="click" for="fmt_either">Any</label>
+        </div>
+        <div>
+            <input class="click" id="fmt_single" type="radio" name="msg_format">
+            <label class="click" for="fmt_single">One line</label>
+        </div>
+        <div>
+            <input class="click" id="fmt_double" type="radio" name="msg_format">
+            <label class="click" for="fmt_double">Two lines</label>
+        </div>
+    </fieldset>
 
     <footer>
         <hr>
         <p>Code available on <a href="https://github.com/yaulendil/dsmsg">Github</a>.</p>
     </footer>
-</div>
-<div><!--Spacer--></div>
 </div>
 
 <!--<div class="cat">&lt;!&ndash;{%if dsmsg%}
